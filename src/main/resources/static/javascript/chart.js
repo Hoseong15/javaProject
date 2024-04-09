@@ -18,7 +18,7 @@ var myChart = new Chart(ctx, {
             yAxisID: 'y-axis-0',
             backgroundColor: '#0d6efd',
             borderColor: '#0d6efd',
-            borderWidth: 1
+            borderWidth: 4
         }]
     },
     options: {
@@ -39,12 +39,13 @@ var myChart = new Chart(ctx, {
 
 const ctx1=document.getElementById('myChart1');
 new Chart(ctx1,{
-    type: 'bar',
+    type: 'line',
     data:{
         labels:['1주차','2주차','3주차','4주차'],
         datasets: [{
             label:'Week',
-            data:[10000,20000,30000,40000],
+            data:[20000,60000,30000,100000],
+            borderColor: '#198754',
             backgroundColor: '#198754',
             borderWidth: 1
         }]
@@ -52,8 +53,13 @@ new Chart(ctx1,{
     options: {
         scales: {
             y:{
+                min:0,
+                max:100000,
                 beginAtZero: true
             }
+        },
+        layout:{
+            padding:10
         }
     }
 });

@@ -1,6 +1,6 @@
 .salesWarp {
     width: 100%;
-    height: 800px;
+    height: 100%;
 }
 .salesDetail{
     position: relative;
@@ -21,4 +21,11 @@
 }
 #myChart1,#myChart2{
     display: none;
+}
+.canvas {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
