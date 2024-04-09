@@ -1,0 +1,22 @@
+.monPageList {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-60%,-50%);
+    width: 40%;
+    border-collapse: collapse;
+    background: #FFFF;
+    border-radius: 10px;
+}
+.monPageList thead{
+    width: 100%;
+    border-bottom: 1px solid rgba(170,170,170,.2);
+}
+.monPageList th, .monPageList td {
+    padding: 8px;
+    text-align: center;
+}
+.total {
+    border-top: 1px solid rgba(170,170,170,.2);
+    font-weight: bold;
+}

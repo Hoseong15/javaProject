@@ -1,0 +1,31 @@
+.dayWarp {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-60%,-50%);
+    width: 40%;
+    border-collapse: collapse;
+    background: #FFFF;
+    border-radius: 10px;
+}
+.dayTitle{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid rgba(170,170,170,.2);
+    text-align: center;
+}
+.dayList{
+    width: 100%;
+}
+.dayList thead{
+    width: 100%;
+}
+.dayList th, .dayList td {
+    padding: 8px;
+    text-align: center;
+}
+.dayTotal {
+    font-weight: bold;
+}

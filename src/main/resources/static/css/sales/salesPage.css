@@ -1,0 +1,24 @@
+.salesWarp {
+    width: 100%;
+    height: 800px;
+}
+.salesDetail{
+    position: relative;
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+
+}
+.salesDetail button{
+    margin-left: 20px;
+}
+.salesContent {
+    position: absolute;
+    right: 100px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+}
+#myChart1,#myChart2{
+    display: none;
+}
