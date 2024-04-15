@@ -7,6 +7,7 @@ import com.querydsl.core.types.dsl.*;
 import com.querydsl.core.types.PathMetadata;
 import javax.annotation.processing.Generated;
 import com.querydsl.core.types.Path;
+import com.querydsl.core.types.dsl.PathInits;
 
 
 /**
@@ -19,17 +20,17 @@ public class QDesignerEntity extends EntityPathBase<DesignerEntity> {
 
     public static final QDesignerEntity designerEntity = new QDesignerEntity("designerEntity");
 
-    public final NumberPath<Integer> date = createNumber("date", Integer.class);
+    public final DatePath<java.time.LocalDate> date = createDate("date", java.time.LocalDate.class);
 
-    public final StringPath free = createString("free");
+    public final ListPath<DayOffEntity, QDayOffEntity> dayOffs = this.<DayOffEntity, QDayOffEntity>createList("dayOffs", DayOffEntity.class, QDayOffEntity.class, PathInits.DIRECT2);
 
     public final NumberPath<Long> id = createNumber("id", Long.class);
 
     public final StringPath name = createString("name");
 
-    public final NumberPath<Integer> phonNum = createNumber("phonNum", Integer.class);
+    public final NumberPath<Integer> sal = createNumber("sal", Integer.class);
 
-    public final NumberPath<Integer> salary = createNumber("salary", Integer.class);
+    public final StringPath tel = createString("tel");
 
     public QDesignerEntity(String variable) {
         super(DesignerEntity.class, forVariable(variable));

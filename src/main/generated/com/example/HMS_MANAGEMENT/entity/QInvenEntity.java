@@ -27,7 +27,7 @@ public class QInvenEntity extends EntityPathBase<InvenEntity> {
 
     public final NumberPath<Integer> itemL = createNumber("itemL", Integer.class);
 
-    public final NumberPath<Integer> itemNm = createNumber("itemNm", Integer.class);
+    public final StringPath itemNm = createString("itemNm");
 
     public QInvenEntity(String variable) {
         super(InvenEntity.class, forVariable(variable));

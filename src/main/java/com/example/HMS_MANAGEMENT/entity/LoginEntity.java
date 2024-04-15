@@ -7,24 +7,23 @@ import javax.persistence.*;
 
 @Entity
 @Getter @Setter
-public class InvenEntity {
+public class LoginEntity {
+
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id; // 제품 코드
+    private Long id;
 
     @Column
-    private String itemNm; // 제품 이름
+    private String userName;
 
     @Column
-    private Integer count; // 제품 수량
+    private String userId;
 
     @Column
-    private String idCalss; // 제품 분류
+    private String password;
 
     @Column
-    private Integer itemL; // 제품 용량
-
-
+    private String role;
 
 }
