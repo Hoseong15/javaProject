@@ -1,5 +1,6 @@
 package com.example.HMS_MANAGEMENT.entity;
 
+import com.example.HMS_MANAGEMENT.dto.SalesDto;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -31,5 +32,12 @@ public class CustomerEntity {
     @Column
     private String frequentDesigner; // 자주찾는 디자이너
 
+    @Column
+    private Integer cusCost;
+
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "salesId")
+    private SalesEntity sales;
 
 }

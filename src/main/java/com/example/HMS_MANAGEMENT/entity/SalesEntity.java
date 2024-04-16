@@ -18,6 +18,7 @@ public class SalesEntity {
     @Column
     private String cut; // 시술
 
+
     @Column
     private String type; // 커트종류
 

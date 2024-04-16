@@ -13,6 +13,7 @@ import java.time.LocalDate;
 @Setter
 public class CustomerDto {
 
+
     private Long id;
 
     @NotBlank(message = "이름은 필수 입력입니다.")
@@ -28,6 +29,8 @@ public class CustomerDto {
 
     @NotBlank(message = "디자이너은 필수 선택입니다.")
     private String frequentDesigner; // 자주찾는 디자이너
+
+    private Integer cusCost;
 
 
 }
