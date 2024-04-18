@@ -2,8 +2,10 @@ package com.example.HMS_MANAGEMENT.entity;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Getter
@@ -12,7 +14,7 @@ public class SalesEntity {
 
     @Id
     @Column(name = "salesId")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id; // 시술 id
 
     @Column
@@ -24,5 +26,6 @@ public class SalesEntity {
 
     @Column
     private Integer cost; // 가격
+
 
 }

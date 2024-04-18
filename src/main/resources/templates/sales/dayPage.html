@@ -27,30 +27,31 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
+            <tr th:each="data : ${dayChartData}">
                 <td>시술</td>
-                <td>25,000,000원</td>
+                <td th:text="${#numbers.formatInteger(data.procedureCost,3,'COMMA')}"></td>
                 <td>월급</td>
-                <td>4,800,000원</td>
+                <td th:text="${#numbers.formatInteger(data.salary,3, 'COMMA')}"></td>
             </tr>
-            <tr>
+            <tr th:each="data : ${dayChartData}">
                 <td>상품판매</td>
-                <td>24,000,000원</td>
+                <td th:text="${#numbers.formatInteger(data.productSale,3, 'COMMA')}"></td>
                 <td>상품구입</td>
-                <td>500,000원</td>
+                <td th:text="${#numbers.formatInteger(data.purchase,3, 'COMMA')}"></td>
             </tr>
             </tbody>
             <tfoot>
-            <tr class="dayTotal">
+            <tr class="dayTotal" th:each="data : ${dayChartData}">
                 <td>수입합계</td>
-                <td>300,000,000원</td>
+                <td th:text="${#numbers.formatInteger(data.income, 3,'COMMA')}"></td>
                 <td>지출합계</td>
-                <td>30,000,000원</td>
+                <td th:text="${#numbers.formatInteger(data.spending,3, 'COMMA')}"></td>
             </tr>
             </tfoot>
         </table>
 
     </div>
 </div>
+
 
 </html>
