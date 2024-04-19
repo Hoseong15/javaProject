@@ -25,7 +25,7 @@ public class SalesEntity {
     private String type; // 커트종류
 
     @Column
-    private Integer cost; // 가격
+    private int cost; // 가격
 
 
 }

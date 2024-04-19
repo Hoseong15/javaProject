@@ -5,6 +5,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import javax.persistence.criteria.CriteriaBuilder;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Entity
@@ -14,33 +15,27 @@ public class DayChartEntity {
 
     @Id
     @Column(name = "dayChartId")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column
-    private Integer procedureCost; // 시술수입
+    private LocalDate date;  // 해당 기록날짜
+    @Column
+    private int serviceIncome; // 시술 수입
 
     @Column
-    private Integer productSale; // 상품판매금액
+    private int productSales; // 상품 판매 수입
 
     @Column
-    private Integer income; // 수입합계
+    private int TotalIncome; // 전체 수입합계
 
     @Column
-    private Integer salary; // 월급
+    private int salaryExpense; // 월급 지출
 
     @Column
-    private Integer purchase; // 상품구입금액
+    private int productPurchase; // 상품 구입 지출
 
     @Column
-    private Integer spending; // 지출합계
-
-    @Column
-    private Integer weekIncome; // 주간수입합계
-
-
-    @Column
-    private LocalDate date;
-
+    private int TotalExpense; // 전체 지출합계
 
 }

@@ -12,23 +12,34 @@
 </th:block>
 
 <div layout:fragment="content">
-        <h2>주간 매출 현황</h2>
-        <div style="display: flex; width: 100%;">
-            <ul style="display: flex; margin-right: 40px; flex-direction: column">
-                <li th:each="weekDay : ${weekDayList}" th:text="${weekDay}"></li>
-            </ul>
-            <div style="display: flex; margin-right: 40px;">
-<!--                <div th:each="day : ${dayList}" th:text="${day}">-->
 
-                </div>
-                <div th:each="sale : ${dayChartData}">
-                    <p th:text="${sale.date}"></p>
-                    <p>수입: <span th:text="${sale.income}"></span></p>
-                    <p>지출: <span th:text="${sale.spending}"></span></p>
-                    <p>총수입합계: <span th:text="${sale.weekIncome}"></span></p>
-                </div>
-            </div>
-        </div>
 </div>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+<!--<h2>주간 매출 현황</h2>-->
+<!--<div style="display: flex; width: 100%;">-->
+<!--    <ul style="display: flex; margin-right: 40px; flex-direction: column">-->
+<!--        <li th:each="weekDay : ${weekDayList}" th:text="${weekDay}"></li>-->
+<!--    </ul>-->
+<!--    <div style="display: flex; margin-right: 40px;">-->
+
+<!--    </div>-->
+<!--    <div th:each="sale : ${dayChartData}">-->
+<!--        <p th:text="${sale.date}"></p>-->
+<!--        <p>수입: <span th:text="${sale.income}"></span></p>-->
+<!--        <p>지출: <span th:text="${sale.spending}"></span></p>-->
+<!--        <p>총수입합계: <span th:text="${sale.weekIncome}"></span></p>-->
+<!--    </div>-->
+<!--</div>-->
+<!--</div>-->
 

@@ -3,31 +3,24 @@ package com.example.HMS_MANAGEMENT.dto;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Getter
 @Setter
 public class DayChartDto {
 
+
     private Long id;
+    private LocalDate date;  // 해당 기록날짜
 
-    private Integer procedureCost; // 시술수입
+    private int serviceIncome; // 시술 수입
+    private int productSales; // 상품 판매 수입
+    private int TotalIncome; // 전체 수입합계
 
-    private Integer productSale; // 상품판매금액
-
-    private Integer income; // 수입합계
-
-    private Integer salary; // 월급
-
-    private Integer purchase; // 상품구입금액
-
-    private Integer spending; // 지출합계
-
-    private Integer weekIncome; // 주간수입합계
-
-
-    private LocalDate date;
-
+    private int salaryExpense; // 월급 지출
+    private int productPurchase; // 상품 구입 지출
+    private int TotalExpense; // 전체 지출합계
 
 
 }
